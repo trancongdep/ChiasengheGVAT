@@ -3,153 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hội thảo HSE 2026 | Cập nhật & Chuyển đổi số</title>
+    <title>Hội thảo HSE 2026 | Đăng ký & Nhận thư mời</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .gradient-text {
-            background: linear-gradient(90deg, #2563eb, #7c3aed);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover; background-position: center;
         }
+        #invitationCard { width: 350px; height: 500px; position: absolute; left: -9999px; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <span class="text-2xl font-bold text-blue-600">VDC</span>
-                <span class="border-l pl-2 text-sm font-semibold text-gray-500 uppercase">HSE Workshop</span>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="logo_Hse_TS.png" alt="Logo HSE-TS" class="h-12 w-auto">
+                <div class="hidden sm:block border-l pl-3">
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Cộng đồng</p>
+                    <p class="text-sm font-bold text-blue-600">Training & Sharing</p>
+                </div>
             </div>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="#about" class="hover:text-blue-600 transition">Giới thiệu</a>
-                <a href="#agenda" class="hover:text-blue-600 transition">Nội dung</a>
-                <a href="#speakers" class="hover:text-blue-600 transition">Diễn giả</a>
-            </div>
-            <a href="#register" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Đăng ký ngay</a>
+            <a href="#register" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition text-sm">ĐĂNG KÝ NGAY</a>
         </div>
     </nav>
 
-    <section class="hero-bg h-screen flex items-center justify-center text-center text-white pt-16">
+    <section class="hero-bg h-[80vh] flex items-center justify-center text-center text-white pt-20">
         <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Cập Nhật Nhanh Các Điểm Mới Trong <br> <span class="text-blue-400">Huấn Luyện ATVSLĐ 2026</span>
-            </h1>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-300">
-                Khám phá những thay đổi quan trọng về Luật Hóa chất, Luật Điện lực 2024 và cuộc cách mạng AI trong HSE.
-            </p>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-                <div class="flex items-center space-x-2">
-                    <i class="far fa-calendar-alt text-blue-400"></i>
-                    <span>08/02/2026</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-map-marker-alt text-blue-400"></i>
-                    <span>Thủ Đức, TP. Hồ Chí Minh</span>
-                </div>
-            </div>
+            <span class="bg-blue-600/30 text-blue-300 px-4 py-1 rounded-full text-sm font-bold border border-blue-500/30 mb-6 inline-block">HỘI THẢO OFFLINE 08/02/2026</span>
+            <h1 class="text-3xl md:text-5xl font-bold mb-6">Cập Nhật Điểm Mới <br>Huấn Luyện ATVSLĐ 2026</h1>
+            <p class="text-gray-300 max-w-xl mx-auto mb-8">Đồng hành cùng chuyên gia VDC nắm bắt Luật Hóa chất, Luật Điện lực và ứng dụng AI trong nghề HSE.</p>
         </div>
     </section>
 
-    <section id="about" class="py-20">
+    <section id="register" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Giá trị bạn nhận được</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-blue-600">
-                        <i class="fas fa-flask fa-lg"></i>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Đăng ký tham dự</h2>
+                    <p class="text-gray-600 mb-8">Sau khi đăng ký thành công, hệ thống sẽ tự động tạo **Thư mời điện tử** dành riêng cho bạn. Hãy lưu lại để check-in tại hội trường.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3 text-sm">
+                            <i class="fas fa-map-marker-alt mt-1 text-blue-600"></i>
+                            <span>Khu vực Thủ Đức, TP.HCM (Địa điểm chi tiết trong thư mời)</span>
+                        </div>
+                        <div class="flex items-start space-x-3 text-sm">
+                            <i class="fas fa-clock mt-1 text-blue-600"></i>
+                            <span>08:30 - 11:30 | Chủ Nhật, 08/02/2026</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Luật Hóa Chất & GHS</h3>
-                    <p class="text-gray-600">Nắm bắt quy chuẩn mới về phân loại, lưu trữ và ứng phó sự cố hóa chất tại doanh nghiệp.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6 text-purple-600">
-                        <i class="fas fa-bolt fa-lg"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Luật Điện Lực 2024</h3>
-                    <p class="text-gray-600">Các văn bản hướng dẫn mới nhất về an toàn điện, đảm bảo tuân thủ pháp luật hiện hành.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6 text-green-600">
-                        <i class="fas fa-robot fa-lg"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">AI trong HSE</h3>
-                    <p class="text-gray-600">Ứng dụng trí tuệ nhân tạo để tối ưu hóa quy trình quản lý và huấn luyện an toàn.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="register" class="py-20 bg-blue-50">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-                <div class="md:w-1/3 bg-blue-600 p-10 text-white">
-                    <h2 class="text-3xl font-bold mb-6">Đăng Ký Tham Dự</h2>
-                    <p class="mb-8 opacity-90">Hoàn thành biểu mẫu để nhận vé mời và tài liệu hội thảo miễn phí từ VDC.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center space-x-3 text-sm">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Giới hạn 40 chỗ ngồi</span>
-                        </li>
-                        <li class="flex items-center space-x-3 text-sm">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Miễn phí cho Sinh viên</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="md:w-2/3 p-10">
-                    <form id="registrationForm" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Họ và Tên</label>
-                                <input type="text" id="userName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Nguyễn Văn A">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Số điện thoại</label>
-                                <input type="tel" id="userPhone" required class="w-full px-4 py-3 rounded-xl border border-gray-100 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="090x xxx xxx">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" id="userEmail" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="email@example.com">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Bạn là?</label>
-                            <select id="userRole" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition">
-                                <option value="worker">Người đi làm</option>
-                                <option value="student">Sinh viên (Miễn phí)</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transform hover:-translate-y-1 transition duration-200 shadow-lg">
-                            XÁC NHẬN ĐĂNG KÝ
-                        </button>
+                <div class="bg-gray-50 p-8 rounded-3xl border shadow-sm">
+                    <form id="regForm" class="space-y-4">
+                        <input type="text" id="name" placeholder="Họ và tên" required class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-blue-500 outline-none">
+                        <input type="tel" id="phone" placeholder="Số điện thoại" required class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-blue-500 outline-none">
+                        <select id="role" class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-blue-500 outline-none">
+                            <option value="Người đi làm">Người đi làm</option>
+                            <option value="Sinh viên">Sinh viên (Miễn phí)</option>
+                        </select>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition">NHẬN THƯ MỜI</button>
                     </form>
-                    <p id="successMsg" class="mt-4 text-green-600 font-semibold hidden text-center">Đăng ký thành công! Chúng tôi sẽ liên hệ bạn sớm.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-white border-t">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-500 mb-4">Đơn vị đồng hành & tài trợ</p>
-            <div class="flex justify-center items-center space-x-4 mb-8">
-                <span class="text-3xl font-black text-blue-900 tracking-tighter">VDC</span>
-                <span class="text-gray-300">|</span>
-                <span class="text-sm font-semibold text-gray-400">TRAINING & CONSULTING</span>
+    <div id="invitationModal" class="fixed inset-0 bg-black/80 z-[60] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-6 max-w-sm w-full text-center relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black"><i class="fas fa-times"></i></button>
+            <h3 class="text-xl font-bold mb-4 text-green-600">Đăng ký thành công!</h3>
+            <div id="previewArea" class="mb-6 flex justify-center shadow-lg"></div>
+            <p class="text-xs text-gray-500 mb-4 italic">Vui lòng chụp màn hình hoặc tải ảnh này để Check-in.</p>
+            <button id="downloadBtn" class="bg-green-600 text-white px-6 py-2 rounded-lg font-bold w-full">TẢI THƯ MỜI (.PNG)</button>
+        </div>
+    </div>
+
+    <div id="invitationCard" class="bg-blue-900 text-white p-8 text-left flex flex-col justify-between">
+        <div>
+            <div class="flex justify-between items-start mb-10">
+                <img src="logo_Hse_TS.png" class="h-10">
+                <p class="text-[10px] text-right font-bold opacity-70 uppercase">Official Invitation<br>HSE Workshop 2026</p>
             </div>
-            <p class="text-xs text-gray-400 italic">Version 1.0 - Cập nhật ngày 29/01/2026</p>
+            <h2 class="text-2xl font-bold leading-tight mb-2">GIẤY MỜI THAM DỰ</h2>
+            <div class="h-1 w-12 bg-orange-400 mb-8"></div>
+            
+            <p class="text-xs opacity-60 mb-1">Trân trọng kính mời:</p>
+            <p id="cardName" class="text-xl font-bold text-orange-400 uppercase mb-6"></p>
+            
+            <div class="space-y-3 text-sm">
+                <p><i class="far fa-calendar-check mr-2"></i> 08/02/2026 | 08:30</p>
+                <p><i class="fas fa-map-pin mr-2"></i> Thủ Đức, TP. Hồ Chí Minh</p>
+            </div>
+        </div>
+        
+        <div class="border-t border-white/20 pt-4 flex justify-between items-end">
+            <div>
+                <p class="text-[10px] opacity-60">Đơn vị đồng hành</p>
+                <p class="font-black text-lg">VDC</p>
+            </div>
+            <div class="bg-white p-1 rounded text-blue-900 font-bold text-[8px]">HSE-TS-2026</div>
+        </div>
+    </div>
+
+    <footer class="py-12 bg-gray-100 border-t">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Đồng hành & Tài trợ</p>
+            <div class="flex justify-center items-center">
+                <span class="text-3xl font-black text-blue-800">VDC</span>
+            </div>
+            <p class="mt-8 text-gray-400 text-[10px]">© 2026 HSE Training and Sharing Group. Version 1.1</p>
         </div>
     </footer>
 
@@ -157,7 +124,6 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-        // Your Firebase config
         const firebaseConfig = {
             apiKey: "AIzaSyCzWjfcD5Dgq7V-i2izb9tKLR6QM6qWPQo",
             authDomain: "tavietnam-78ae8.firebaseapp.com",
@@ -170,32 +136,42 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        const form = document.getElementById('registrationForm');
-        form.addEventListener('submit', async (e) => {
+        document.getElementById('regForm').onsubmit = async (e) => {
             e.preventDefault();
-            
-            const btn = e.target.querySelector('button');
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang xử lý...';
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const role = document.getElementById('role').value;
 
             try {
-                await addDoc(collection(db, "hse_workshop_2026"), {
-                    fullName: document.getElementById('userName').value,
-                    phone: document.getElementById('userPhone').value,
-                    email: document.getElementById('userEmail').value,
-                    role: document.getElementById('userRole').value,
-                    regDate: new Date().toISOString()
-                });
+                // 1. Lưu Firebase
+                await addDoc(collection(db, "hse_workshop_2026"), { name, phone, role, date: new Date().toISOString() });
+                
+                // 2. Cập nhật tên vào thẻ mời ẩn
+                document.getElementById('cardName').innerText = name;
+                
+                // 3. Render ảnh thẻ mời từ HTML
+                const card = document.getElementById('invitationCard');
+                const canvas = await html2canvas(card);
+                const imgData = canvas.toDataURL('image/png');
+                
+                // 4. Hiển thị Modal
+                const preview = document.getElementById('previewArea');
+                preview.innerHTML = `<img src="${imgData}" class="max-h-80 rounded-lg">`;
+                document.getElementById('invitationModal').classList.remove('hidden');
+                
+                // Nút tải ảnh
+                document.getElementById('downloadBtn').onclick = () => {
+                    const link = document.createElement('a');
+                    link.download = `Thu-moi-HSE-${name}.png`;
+                    link.href = imgData;
+                    link.click();
+                };
+            } catch (err) { alert("Lỗi đăng ký!"); }
+        };
 
-                document.getElementById('successMsg').classList.remove('hidden');
-                form.reset();
-            } catch (error) {
-                alert('Có lỗi xảy ra, vui lòng thử lại sau.');
-            } finally {
-                btn.disabled = false;
-                btn.innerHTML = 'XÁC NHẬN ĐĂNG KÝ';
-            }
-        });
+        window.closeModal = () => {
+            document.getElementById('invitationModal').classList.add('hidden');
+        };
     </script>
 </body>
 </html>
